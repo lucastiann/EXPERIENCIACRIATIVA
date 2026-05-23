@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro Paciente</title>
+  <link rel="stylesheet" href="cadastro-paciente.css">
+</head>
+<body>
+
+  <main class="cadastro-container">
+    <form class="cadastro-form">
+
+      <section class="topo-form">
+        <div class="campos-esquerda">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
+          </div>
+
+          <div class="campo">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf">
+          </div>
+        </div>
+
+        <button type="button" class="btn-score">SCORE</button>
+      </section>
+
+      <section class="sexo-group">
+        <label class="sexo-masculino">
+          <input type="radio" name="sexo" value="masculino">
+          <span>Masculino</span>
+        </label>
+
+        <label class="sexo-feminino">
+          <input type="radio" name="sexo" value="feminino">
+          <span>Feminino</span>
+        </label>
+      </section>
+
+      <section class="opcoes-grid">
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Deficiência intelectual</span>
+          <input type="checkbox" name="sintomas[]" value="deficiencia_intelectual">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Face prolongada/orelha</span>
+          <input type="checkbox" name="sintomas[]" value="face_prolongada_orelha">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Macroorquidismo</span>
+          <input type="checkbox" name="sintomas[]" value="macroorquidismo">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Hipermobilidade articular</span>
+          <input type="checkbox" name="sintomas[]" value="hipermobilidade_articular">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Dificuldade aprendizagem</span>
+          <input type="checkbox" name="sintomas[]" value="dificuldade_aprendizagem">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Déficit de atenção</span>
+          <input type="checkbox" name="sintomas[]" value="deficit_atencao">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Movimentos repetitivos</span>
+          <input type="checkbox" name="sintomas[]" value="movimentos_repetitivos">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Atraso na fala</span>
+          <input type="checkbox" name="sintomas[]" value="atraso_fala">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Hiperatividade</span>
+          <input type="checkbox" name="sintomas[]" value="hiperatividade">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Evita contato visual</span>
+          <input type="checkbox" name="sintomas[]" value="evita_contato_visual">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Evita contato físico</span>
+          <input type="checkbox" name="sintomas[]" value="evita_contato_fisico">
+          <span class="seletor"></span>
+        </label>
+
+        <label class="opcao-item">
+          <span class="texto-opcao">Agressividade</span>
+          <input type="checkbox" name="sintomas[]" value="agressividade">
+          <span class="seletor"></span>
+        </label>
+
+      </section>
+    </form>
+  </main>
+
+</body>
+</html>

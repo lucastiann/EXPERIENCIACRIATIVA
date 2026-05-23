@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #c4edff;
+}
+
+.medico-container {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #c4edff;
+  padding: 28px 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.perfil-medico {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 75px;
+}
+
+.foto-medico {
+  width: 105px;
+  height: 105px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.dados-medico p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 11px;
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 12px;
+}
+
+.botoes button {
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0757bd;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+.botoes button:hover {
+  background-color: #064aa0;
+    cursor: pointer;
+}
