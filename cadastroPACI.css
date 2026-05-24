@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #bfe8fb;
+
+    display: flex;
+    justify-content: center;
+}
+
+.tela{
+    width: 320px;
+    min-height: 100vh;
+
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+}
+
+.dados label{
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 4px;
+}
+
+.dados input{
+    width: 145px;
+    height: 28px;
+
+    border: 2px solid #2b6de0;
+    border-radius: 6px;
+
+    margin-bottom: 10px;
+
+    padding-left: 8px;
+}
+
+.score{
+    width: 95px;
+    height: 100px;
+
+    background-color: #004aad;
+    color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.sexo{
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 25px;
+
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.grid{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px 18px;
+}
+
+.item{
+    height: 48px;
+
+    border: 2px solid #2b6de0;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #004aad;
+
+    background-color: #eaf4ff;
+
+    padding: 5px;
+
+    transition: 0.3s;
+}
+
+.item:hover{
+    background-color: #d4e8ff;
+
+    transform: scale(1.03);
+}
