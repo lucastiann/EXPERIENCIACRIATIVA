@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "nome_do_seu_banco";
+$banco = "backup_sxf";
 
 $conn = new mysqli($servidor, $usuario, $senha, $banco);
 
