@@ -1,0 +1,26 @@
+{
+  "name": "x-fragil",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma de triagem populacional para Síndrome do X Frágil",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "node scripts/setup.js && concurrently -k -n SERVER,CLIENT -c blue,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev": "npm run start",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev",
+    "setup": "node scripts/setup.js",
+    "migrate": "npm --workspace server run migrate",
+    "seed": "npm --workspace server run seed",
+    "reset-db": "rm -f data/x-fragil.sqlite3 && node scripts/setup.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
