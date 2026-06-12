@@ -1,6 +1,7 @@
 {
   "name": "x-fragil",
   "version": "1.0.0",
+  "main" : "src/index.js",
   "private": true,
   "description": "Plataforma de triagem populacional para Síndrome do X Frágil",
   "workspaces": [
