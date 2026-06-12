@@ -26,7 +26,7 @@ async function getThreshold() {
 }
 
 // POST /api/patients/:patientId/scores — cria um novo escore (sessao de avaliacao)
-router.post('/patients/:patientId/scores', async (req, res) => {
+router.post('/patients/:patientId/escores', async (req, res) => {
   const patientId = req.params.patientId;
   const patient = await db('patients').where({ id: patientId }).first();
   if (!patient) return res.status(404).json({ error: 'Paciente nao encontrado' });

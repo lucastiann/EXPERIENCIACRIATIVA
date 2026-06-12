@@ -60,7 +60,7 @@ export default function ScoreMeter({ value = 0, max = 30, threshold = 10, size =
           de {max.toFixed(0)} pontos
         </div>
         <div className={`mt-2 text-sm font-medium ${refer ? 'text-coral-600' : 'text-emerald-600'}`}>
-          {refer ? 'Encaminhar para teste genetico' : 'Abaixo do limiar de encaminhamento'}
+          {refer ? 'Encaminhar para teste genético' : 'Abaixo do limiar de encaminhamento'}
         </div>
       </div>
     </div>

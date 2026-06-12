@@ -71,7 +71,7 @@ export default function PatientDetail() {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <Link to={`/pacientes/${id}/score`}>
+          <Link to={`/pacientes/${id}/escore`}>
             <Button size="lg"><ClipboardList size={16}/> Novo score</Button>
           </Link>
           <Button variant="ghost" onClick={deletePatient}><Trash2 size={14}/> Excluir</Button>
@@ -128,14 +128,14 @@ function ScoresCard({ patient }) {
       <CardHeader
         title="Historico de scores"
         subtitle="Cada sessao de avaliacao gera um score — pelo profissional, pelo Instituto Buko Kaesemodel, por familiares diferentes."
-        action={<Link to={`/pacientes/${patient.id}/score`}><Button size="sm"><Plus size={14}/> Novo</Button></Link>}
+        action={<Link to={`/pacientes/${patient.id}/escore`}><Button size="sm"><Plus size={14}/> Novo</Button></Link>}
       />
       {patient.scores.length === 0 ? (
         <EmptyState
           icon={<ClipboardList size={32} />}
           title="Nenhum score aplicado"
           description="Comece a triagem aplicando o primeiro score. Voce pode aplicar varios ao longo do tempo."
-          action={<Link to={`/pacientes/${patient.id}/score`}><Button>Aplicar score</Button></Link>}
+          action={<Link to={`/pacientes/${patient.id}/escore`}><Button>Aplicar score</Button></Link>}
         />
       ) : (
         <ul className="divide-y divide-ink-100">
@@ -148,7 +148,7 @@ function ScoresCard({ patient }) {
                 <div className="text-xs text-ink-400">
                   {s.respondent_type === 'profissional' && `Por ${s.professional_name}`}
                   {s.respondent_type === 'familiar_cadastrado' && `Familiar (${s.respondent_relation || ''})`}
-                  {s.respondent_type === 'familiar_telefone' && `Ligacao c/ ${s.respondent_name}`}
+                  {s.respondent_type === 'familiar_telefone' && `Ligação c/ ${s.respondent_name}`}
                   {s.respondent_type === 'outro' && (s.respondent_name || 'Outro')}
                   {' · '}
                   {new Date(s.created_at).toLocaleString('pt-BR')}

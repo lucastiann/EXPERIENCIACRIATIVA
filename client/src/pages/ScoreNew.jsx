@@ -14,17 +14,17 @@ import ScoreMeter from '../components/ScoreMeter.jsx';
 const RESPONDENT_TYPES = [
   { value: 'profissional', label: 'Eu, profissional' },
   { value: 'familiar_cadastrado', label: 'Familiar cadastrado' },
-  { value: 'familiar_telefone', label: 'Ligacao com a familia (telefone)' },
+  { value: 'familiar_telefone', label: 'Ligação com a familia (telefone)' },
   { value: 'outro', label: 'Outro' },
 ];
 
 const CATEGORY_LABELS = {
-  fisica: 'Caracteristicas fisicas',
+  fisica: 'Características físicas',
   cognitiva: 'Aspectos cognitivos',
   comportamental: 'Comportamento social',
 };
 
-export default function ScoreNew() {
+export default function EscoreNew() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [patient, setPatient] = useState(null);
@@ -43,7 +43,7 @@ export default function ScoreNew() {
       const { data: s } = await api.get('/symptoms', { params: { sex: p.sex } });
       setSymptoms(s);
       const { data: settings } = await api.get('/settings').catch(() => ({ data: {} }));
-      if (settings.score_threshold) setThreshold(parseFloat(settings.score_threshold));
+      if (settings.escore_threshold) setThreshold(parseFloat(settings.escore_threshold));
     })();
   }, [id]);
 
@@ -75,7 +75,7 @@ export default function ScoreNew() {
         respondent_relation: ['familiar_telefone', 'outro'].includes(respondent.type) ? respondent.relation : null,
         session_notes: notes,
       };
-      const { data } = await api.post(`/patients/${id}/scores`, payload);
+      const { data } = await api.post(`/patients/${id}/escores`, payload);
       setResult(data);
     } finally {
       setSaving(false);
@@ -104,7 +104,7 @@ export default function ScoreNew() {
 
           {result.refer ? (
             <div className="mt-8 bg-coral-50 border border-coral-100 rounded-2xl p-5 text-left">
-              <div className="font-medium text-coral-600 flex items-center gap-2"><Sparkles size={16}/> Recomendacao</div>
+              <div className="font-medium text-coral-600 flex items-center gap-2"><Sparkles size={16}/> Recomendação</div>
               <p className="text-sm text-ink-600 mt-2">
                 O score está acima do limiar configurado. <strong>Considere encaminhar o paciente para o teste genético confirmatório</strong>.
                 Antes disso, ajude o Instituto a anexar fotos/videos e talvez aplicar um segundo score com outro acompanhante.
@@ -122,7 +122,7 @@ export default function ScoreNew() {
 
           <div className="mt-8 flex items-center justify-center gap-3">
             <Button variant="ghost" onClick={() => { setResult(null); setSelected({}); }}>Aplicar outro</Button>
-            <Button onClick={() => navigate(`/pacientes/${id}`)}>Voltar ao prontuario</Button>
+            <Button onClick={() => navigate(`/pacientes/${id}`)}>Voltar ao prontuário</Button>
           </div>
         </Card>
       </div>
@@ -136,7 +136,7 @@ export default function ScoreNew() {
       </button>
 
       <div>
-        <div className="text-xs uppercase tracking-[0.18em] text-ink-400">Nova avaliacao</div>
+        <div className="text-xs uppercase tracking-[0.18em] text-ink-400">Nova avaliação</div>
         <h1 className="font-display text-5xl tracking-tight mt-1">Score — {patient.full_name}</h1>
         <p className="text-ink-400 mt-2">Marque as características observadas. O resultado é calculado em tempo real.</p>
       </div>
@@ -144,7 +144,7 @@ export default function ScoreNew() {
       <div className="grid lg:grid-cols-[1.6fr_1fr] gap-6">
         <div className="space-y-6">
           <Card>
-            <CardHeader title="Quem esta respondendo?" subtitle="Cada respondente pode dar um score diferente — esse contexto eh importante." />
+            <CardHeader title="Quem esta respondendo?" subtitle="Cada respondente pode dar um score diferente — esse contexto é importante." />
             <Select label="Tipo de respondente" options={RESPONDENT_TYPES} value={respondent.type} onChange={(e) => setRespondent({ ...respondent, type: e.target.value })} />
 
             {respondent.type === 'familiar_cadastrado' && (
@@ -203,7 +203,7 @@ export default function ScoreNew() {
           ))}
 
           <Card>
-            <CardHeader title="Anotacoes da sessao" subtitle="Contextos relevantes — o que o respondente contou, observacoes do dia, etc." />
+            <CardHeader title="Anotações da sessão" subtitle="Contextos relevantes — o que o respondente contou, observações do dia, etc." />
             <Textarea value={notes} onChange={(e) => setNotes(e.target.value)} rows={4} />
           </Card>
         </div>
