@@ -14,7 +14,7 @@ export default function Admin() {
     <div className="space-y-6">
       <div>
         <div className="text-xs uppercase tracking-[0.18em] text-ink-400">Administração</div>
-        <h1 className="font-display text-5xl tracking-tight mt-1">Painel da Instituto Buko Kaesemodel</h1>
+        <h1 className="font-display text-5xl tracking-tight mt-1">Painel do Instituto Buko Kaesemodel</h1>
       </div>
 
       <div className="flex gap-2 border-b border-ink-100">
