@@ -17,9 +17,9 @@ const fade = {
 const steps = [
   { icon: Users2, title: 'Cadastre o paciente', body: 'Busca por CPF, dados básicos, responsável atual. Funciona para novos pacientes ou acompanhamentos.' },
   { icon: FileSearch, title: 'Responda o score', body: 'Marque sintomas observados. O cálculo já pondera pelo gênero e mostra o resultado na hora.' },
-  { icon: ImagePlus, title: 'Anexe fotos e videos', body: 'Hiperelasticidade nos dedos, face, comportamento — evidencias visuais para a ONG.' },
+  { icon: ImagePlus, title: 'Anexe fotos e videos', body: 'Hiperelasticidade nos dedos, face, comportamento — evidencias visuais para o Instituto Buko Kaesemodel.' },
   { icon: Network, title: 'Rastreamento genético da familia', body: 'Quando o teste confirma, a mutacao corre pela linha materna ou paterna. Voce mapeia.' },
-  { icon: Microscope, title: 'Encaminhe com critérios', body: 'O teste genetico custa caro. A plataforma ajuda a ONG a acolher quem mais precisa.' },
+  { icon: Microscope, title: 'Encaminhe com critérios', body: 'O teste genetico custa caro. A plataforma ajuda o Instituto Buko Kaesemodel a acolher quem mais precisa.' },
   { icon: ShieldCheck, title: 'Tudo auditado!', body: 'Senhas com hash, log de alterações, controle por perfil. Sigilo dos dados em primeiro lugar.' },
 ];
 

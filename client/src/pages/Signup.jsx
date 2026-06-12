@@ -21,7 +21,7 @@ const PROFISSOES = [
   { value: 'fisioterapeuta', label: 'Fisioterapeuta' },
   { value: 'enfermeiro', label: 'Enfermeira(o)' },
   { value: 'assistente_social', label: 'Assistente social' },
-  { value: 'voluntario_ong', label: 'Voluntario(a) da ONG' },
+  { value: 'voluntario_ong', label: 'Voluntario(a) do Instituto Buko Kaesemodel' },
   { value: 'outro', label: 'Outro' },
 ];
 
@@ -63,7 +63,7 @@ export default function Signup() {
           </p>
         </div>
         <div className="text-xs text-white/50">
-          Cadastro sujeito a aprovação da ONG para uso clínico.
+          Cadastro sujeito a aprovação do Instituto Buko Kaesemodel para uso clínico.
         </div>
       </div>
 

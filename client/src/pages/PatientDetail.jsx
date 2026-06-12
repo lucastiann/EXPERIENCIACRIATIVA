@@ -127,7 +127,7 @@ function ScoresCard({ patient }) {
     <Card>
       <CardHeader
         title="Historico de scores"
-        subtitle="Cada sessao de avaliacao gera um score — pelo profissional, pela ONG, por familiares diferentes."
+        subtitle="Cada sessao de avaliacao gera um score — pelo profissional, pelo Instituto Buko Kaesemodel, por familiares diferentes."
         action={<Link to={`/pacientes/${patient.id}/score`}><Button size="sm"><Plus size={14}/> Novo</Button></Link>}
       />
       {patient.scores.length === 0 ? (
@@ -179,7 +179,7 @@ function AttachmentsCard({ patient, onUpload, onReload, inputRef }) {
     <Card>
       <CardHeader
         title="Fotos e videos"
-        subtitle="Evidencias visuais — hiperelasticidade nos dedos, face, comportamento — para a ONG avaliar."
+        subtitle="Evidencias visuais — hiperelasticidade nos dedos, face, comportamento — para o Instituto Buko Kaesemodel avaliar."
         action={
           <Button size="sm" onClick={() => inputRef.current?.click()}>
             <Upload size={14}/> Enviar

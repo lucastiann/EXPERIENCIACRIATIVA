@@ -1,6 +1,6 @@
 // Escores (questionario respondido). Um paciente pode ter VARIOS escores ao longo do tempo:
 // - Primeira resposta: pelo profissional que suspeita
-// - Segunda resposta: pela ONG, por ligacao com a familia
+// - Segunda resposta: pelo Instituto Buko Kaesemodel, por ligacao com a familia
 // - Mais respostas: outros acompanhantes da crianca (pai, mae, avo) podem responder
 //   e o resultado muda — isso eh importante para o diagnostico diferencial.
 

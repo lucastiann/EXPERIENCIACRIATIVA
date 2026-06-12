@@ -14,7 +14,7 @@ export default function Admin() {
     <div className="space-y-6">
       <div>
         <div className="text-xs uppercase tracking-[0.18em] text-ink-400">Administração</div>
-        <h1 className="font-display text-5xl tracking-tight mt-1">Painel da ONG</h1>
+        <h1 className="font-display text-5xl tracking-tight mt-1">Painel da Instituto Buko Kaesemodel</h1>
       </div>
 
       <div className="flex gap-2 border-b border-ink-100">
@@ -75,7 +75,7 @@ function SettingsTab() {
       </Card>
 
       <Card>
-        <CardHeader title="Contato da ONG" subtitle="(aparece nos relatórios e na página inicial)" />
+        <CardHeader title="Contato do Instituto Buko Kaesemodel" subtitle="(aparece nos relatórios e na página inicial)" />
         <div className="space-y-4">
           <Input label="Nome da plataforma" value={settings.platform_name || ''} onChange={(e) => update('platform_name', e.target.value)} />
           <Input label="Email de contato" type="email" value={settings.ong_contact_email || ''} onChange={(e) => update('ong_contact_email', e.target.value)} />

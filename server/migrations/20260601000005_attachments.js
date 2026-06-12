@@ -1,5 +1,5 @@
 // Anexos: fotos e videos vinculados ao paciente (ou a um escore especifico).
-// Conforme Ina: a ONG precisa de fotos/videos pra avaliar caracteristicas fisicas
+// O Instituto Buko Kaesemodel precisa de fotos/videos pra avaliar caracteristicas fisicas
 // (ex: hiperelasticidade nos dedos) antes de encaminhar para o teste genetico caro.
 
 exports.up = (knex) =>
