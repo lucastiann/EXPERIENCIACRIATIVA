@@ -11,6 +11,12 @@ git clone https://github.com/lucastiann/EXPERIENCIACRIATIVA.git
 cd EXPERIENCIACRIATIVA
 npm install && npm run start
 ```
+OBS:
+O Powershell pode ter uma trava de segurança que impeça de rodar o **npm install** de primeira, caso apareça esse erro rode:
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+E depois  ```npm install```
 
 Abre em **http://localhost:5173**.
 
