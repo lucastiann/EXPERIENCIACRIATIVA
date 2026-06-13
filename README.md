@@ -4,12 +4,18 @@
   ### Plataforma colaborativa de triagem clínica para a Síndrome do X Frágil
 </div>
 
-## Como rodar?
+## Como rodar em macOS?
 
 ```bash
+# Baixar e instalar o Homebrew:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Baixar e instalar o Node.js:
+brew install node
 git clone https://github.com/lucastiann/EXPERIENCIACRIATIVA.git
 cd EXPERIENCIACRIATIVA
-npm install && npm run start
+npm install
+npm run start
 ```
 OBS:
 O Powershell pode ter uma trava de segurança que impeça de rodar o **npm install** de primeira, caso apareça esse erro rode:
@@ -20,8 +26,38 @@ E depois  ```npm install```
 
 Abre em **http://localhost:5173**.
 
-> **Sem MySQL, sem Workbench, sem PHP, sem `mysqli`.**
+## Como rodar em Windows?
+```bash
+
+faça o download do Node.js na versão 22.x diretamente do site oficial. 
+
+# Baixar e instalar o Chocolatey:
+powershell -c "irm https://community.chocolatey.org/install.ps1|iex"
+# Baixar e instalar o Node.js:
+choco install nodejs --version="22.22.3"
+# Verifique a versão do Node.js:
+node -v # Deve exibir "v22.22.3".
+# Verificar a versão do npm:
+npm -v # Deve imprimir "10.9.8".
+
+git clone https://github.com/lucastiann/EXPERIENCIACRIATIVA.git
+cd EXPERIENCIACRIATIVA
+npm install
+npm run start
+
+```
+OBS:
+O Powershell pode ter uma trava de segurança que impeça de rodar o **npm install** de primeira, caso apareça esse erro rode:
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+E depois  ```npm install```
+
+Abre em **http://localhost:5173**.
+
+> *Sem MySQL, sem Workbench, sem PHP, sem `mysqli`.*
 > O banco é um arquivo `data/x-fragil.sqlite3` criado automaticamente pelas migrations na primeira execução.
+
 
 **Credenciais prontas pra demonstrar:**
 
