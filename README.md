@@ -55,6 +55,11 @@ E depois  ```npm install```
 
 Abre em **http://localhost:5173**.
 
+Vídeo da visão de usuário e administrador: https://youtu.be/8mehGHunnpo
+
+Vídeo de instalação em macOS e Windows: https://youtu.be/bnkd7KnSzUA
+
+
 > *Sem MySQL, sem Workbench, sem PHP, sem `mysqli`.*
 > O banco é um arquivo `data/x-fragil.sqlite3` criado automaticamente pelas migrations na primeira execução.
 
